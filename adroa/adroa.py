@@ -14,64 +14,55 @@ def create_directories(app_name: str) -> None:
 
 def create_readme(app_name: str) -> None:
     """Create a README.md file."""
-    readme = open(f'{app_name}/README.md', 'w')
-    readme.write(f'# {app_name}')
-    readme.close()
+    with open(f'{app_name}/README.md', 'w') as readme:
+        readme.write(f'# {app_name}')
 
 
 def create_gitignore(app_name: str) -> None:
     """Create a .gitignore file."""
-    gitignore = open(f'{app_name}/.gitignore', 'w')
-    gitignore.write(data.GITIGNORE)
-    gitignore.close()
+    with open(f'{app_name}/.gitignore', 'w') as gitignore:
+        gitignore.write(data.GITIGNORE)
 
 
 def create_init(app_name: str) -> None:
     """Create an __init__.py file."""
-    init = open(f'{app_name}/src/__init__.py', 'w')
-    init.close()
+    os.mknod(f'{app_name}/src/__init__.py')
 
 
 def create_app(app_name: str) -> None:
     """Create an app.py file."""
-    app = open(f'{app_name}/src/app.py', 'w')
-    app.write(data.APP)
-    app.close()
+    with open(f'{app_name}/src/app.py', 'w') as app:
+        app.write(data.APP)
 
 
 def create_base(app_name: str) -> None:
     """Create a base.html file."""
-    base = open(f'{app_name}/src/templates/base.html', 'w')
-    base.write(data.BASE)
-    base.close()
+    with open(f'{app_name}/src/templates/base.html', 'w') as base:
+        base.write(data.BASE)
 
 
 def create_index(app_name: str) -> None:
     """Create an index.html file."""
-    index = open(f'{app_name}/src/templates/index.html', 'w')
-    index.write(data.INDEX)
-    index.close()
+    with open(f'{app_name}/src/templates/index.html', 'w') as index:
+        index.write(data.INDEX)
 
 
 def create_style(app_name: str) -> None:
     """Create a style.css file."""
-    style = open(f'{app_name}/src/static/style.css', 'w')
-    style.write(data.STYLE)
-    style.close()
+    with open(f'{app_name}/src/static/style.css', 'w') as style:
+        style.write(data.STYLE)
 
 
 def create_conftest(app_name: str) -> None:
     """Create a conftest.py file."""
-    conftest = open(f'{app_name}/tests/conftest.py', 'w')
-    conftest.write(data.CONFTEST)
-    conftest.close()
+    with open(f'{app_name}/tests/conftest.py', 'w') as conftest:
+        conftest.write(data.CONFTEST)
 
 
 def create_test_app(app_name: str) -> None:
     """Create a test_app.py file."""
-    test_app = open(f'{app_name}/tests/test_app.py', 'w')
-    test_app.write(data.TEST_APP)
-    test_app.close()
+    with open(f'{app_name}/tests/test_app.py', 'w') as test_app:
+        test_app.write(data.TEST_APP)
 
 
 def create_files(app_name: str) -> None:
