@@ -1,6 +1,7 @@
 # Adroa
 
-[![Build](https://img.shields.io/github/workflow/status/esadek/adroa/CI)](https://github.com/esadek/adroa/actions/workflows/ci.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/esadek/adroa/ci.yml?branch=main
+)](https://github.com/esadek/adroa/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/esadek/adroa)](https://github.com/esadek/adroa/blob/main/LICENSE)
 [![Release](https://img.shields.io/github/v/release/esadek/adroa)](https://github.com/esadek/adroa/releases)
 
